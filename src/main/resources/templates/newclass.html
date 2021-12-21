@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thymeleaf.org >
+<html lang="en"  xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.thymeleaf.org" >
 
 <head>
   <meta charset="UTF-8">
@@ -40,6 +40,18 @@
       </div>
     </div>
   </nav>
+
+  <div class="container">
+        <h1>Nuova classe</h1>
+        <form action="/newclass" method="post">
+            <div class="mb-3">
+              <label for="nomeclasse" class="form-label">Name of the new Class</label>
+              <input type="text" class="form-control" id="nomeclasse" name="name" aria-describedby="emailHelp">
+            </div>
+        
+            <button type="submit" class="btn btn-warning">Add Class</button>
+          </form>
+    </div>
 
 
 

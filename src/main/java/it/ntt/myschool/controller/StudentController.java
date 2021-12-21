@@ -24,14 +24,12 @@ public class StudentController {
      }
 
  //********************************************************************************
-     //http get request -solo se viene interrogato /classes
+     //http get request -solo se viene interrogato /students
      @GetMapping("/students") //1- path che vogliamo
      public String getClasses(Model model) { //MODEL view controller -- model ce lo da spring
-         //model è un po' il nostro dizionario= chiave-valore
-
+        //model è un po' il nostro dizionario= chiave-valore
         model.addAttribute("students", studentRepository.findAll() ); //2 - ottenere il repository con dep.Injection  //.findAll serve a noi per prendere tutti i dati della tabella
-
-         return "students";  //3 - nome della pag html che usiamo come template
+        return "students"; //3 - nome della pag html che usiamo come template
      }
 
      @GetMapping("/students/{name}")
